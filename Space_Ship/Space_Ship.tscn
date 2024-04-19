@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://fe3s4akv4bh6"]
+
+[ext_resource type="Script" path="res://Space_Ship/Space_Ship.gd" id="1_xirev"]
+[ext_resource type="Texture2D" uid="uid://r0ihh0thy5vv" path="res://Space_Ship/0001YB7AHFPACS3X-C122-F4.png" id="2_hu6ef"]
+[ext_resource type="PackedScene" uid="uid://d2x5rhymdmh6x" path="res://Player/Player.tscn" id="2_tut7r"]
+
+[node name="Space_Ship" type="CharacterBody2D"]
+script = ExtResource("1_xirev")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+scale = Vector2(5, 5)
+texture = ExtResource("2_hu6ef")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_tut7r")]

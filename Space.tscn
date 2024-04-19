@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://r5r1ygghduwu"]
+
+[ext_resource type="PackedScene" uid="uid://fe3s4akv4bh6" path="res://Space_Ship/Space_Ship.tscn" id="1_20uqd"]
+
+[node name="Space" type="Node2D"]
+
+[node name="Space_Ship" parent="." instance=ExtResource("1_20uqd")]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -376.0
+offset_top = 2.0
+offset_right = -336.0
+offset_bottom = 42.0
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 306.0
+offset_top = -124.0
+offset_right = 346.0
+offset_bottom = -84.0
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 252.0
+offset_top = 143.0
+offset_right = 292.0
+offset_bottom = 183.0

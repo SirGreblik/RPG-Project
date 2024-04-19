@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfmt2x5dslfqe"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_eaqcu"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_eaqcu")
+
+[node name="Start Game" type="Button" parent="."]
+offset_left = 502.0
+offset_top = 122.0
+offset_right = 707.0
+offset_bottom = 260.0
+text = "Start Game"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 518.0
+offset_top = 361.0
+offset_right = 715.0
+offset_bottom = 463.0
+text = "Quit"
+
+[connection signal="pressed" from="Start Game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
