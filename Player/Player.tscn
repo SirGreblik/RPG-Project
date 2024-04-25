@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d0kvlb1jqvr0h" path="res://icon.svg" id="2_ql1kt"]
 [ext_resource type="Script" path="res://Player/Camera2D.gd" id="3_a6brd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6s0y"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07khl"]
 size = Vector2(128, 128)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
@@ -14,10 +14,9 @@ script = ExtResource("1_j2j2k")
 texture = ExtResource("2_ql1kt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_j6s0y")
+shape = SubResource("RectangleShape2D_07khl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.25, 0.25)
 process_callback = 0
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
 script = ExtResource("3_a6brd")

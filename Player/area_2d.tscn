@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2o4hugn37ko7"]
+
+[ext_resource type="Script" path="res://Player/area_2d.gd" id="1_cghmv"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_cghmv")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

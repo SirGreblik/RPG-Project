@@ -1,5 +1,5 @@
 extends CharacterBody2D
-const S = 300
+const S = 600
 const A = 2
 const R = 0.02
 func _ready():

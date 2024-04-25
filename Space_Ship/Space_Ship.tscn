@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://fe3s4akv4bh6"]
+[gd_scene load_steps=7 format=3 uid="uid://fe3s4akv4bh6"]
 
 [ext_resource type="Script" path="res://Space_Ship/Space_Ship.gd" id="1_xirev"]
 [ext_resource type="Texture2D" uid="uid://r0ihh0thy5vv" path="res://Space_Ship/0001YB7AHFPACS3X-C122-F4.png" id="2_hu6ef"]
 [ext_resource type="PackedScene" uid="uid://d2x5rhymdmh6x" path="res://Player/Player.tscn" id="2_tut7r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlbj8"]
+size = Vector2(568, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pk3hb"]
+size = Vector2(531, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lquh"]
+size = Vector2(66, 168)
 
 [node name="Space_Ship" type="CharacterBody2D"]
 script = ExtResource("1_xirev")
@@ -13,3 +22,24 @@ scale = Vector2(5, 5)
 texture = ExtResource("2_hu6ef")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_tut7r")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+modulate = Color(1, 0, 1, 1)
+top_level = true
+position = Vector2(-603, 16)
+shape = SubResource("RectangleShape2D_rlbj8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(341, -191)
+polygon = PackedVector2Array(600, 0, 600, 600, 0, 600, 0, 450, 450, 450, 450, 150, 0, 150, 0, 0)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-420, 289)
+shape = SubResource("RectangleShape2D_pk3hb")
+one_way_collision_margin = 128.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-551, 143)
+shape = SubResource("RectangleShape2D_6lquh")

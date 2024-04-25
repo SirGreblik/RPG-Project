@@ -21,8 +21,8 @@ Space_Ship="*res://Space_Ship/Space_Ship.gd"
 
 [display]
 
-window/size/viewport_width=1000
-window/size/viewport_height=1000
+window/size/viewport_width=900
+window/size/viewport_height=900
 
 [input]
 
