@@ -8,7 +8,7 @@ func _ready():
 	set_limit(1000,1000)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 
 	if Input.is_key_pressed(KEY_0):
 		set_zoom(zoom/0.99)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdhq3x8kp4v13"]
+
+[ext_resource type="Texture2D" uid="uid://d0kvlb1jqvr0h" path="res://icon.svg" id="1_2s56s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uulqp"]
+radius = 169.499
+
+[node name="AsteroidTest" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_uulqp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(15, 14)
+scale = Vector2(2.0957, 2.01758)
+texture = ExtResource("1_2s56s")

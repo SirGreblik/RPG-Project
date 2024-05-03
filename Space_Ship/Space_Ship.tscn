@@ -7,7 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ato8j"]
 size = Vector2(345.5, 180)
 
-[node name="Space_Ship" type="CharacterBody2D"]
+[node name="SpaceShip" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_xirev")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,38 +17,40 @@ rotation = -1.5708
 scale = Vector2(5, 5)
 texture = ExtResource("2_hu6ef")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_tut7r")]
+[node name="ShipStructFront" type="CollisionPolygon2D" parent="."]
+position = Vector2(-11, 17)
+polygon = PackedVector2Array(-107, -1403, 133, -1404, 250, -1241, 326, -521, 523, -147, 621, -65, 624, 181, 353, -429, 303, -520, 219, -1250, -179, -1260, -278, -482, -590, 177, -573, -115, -494, -135, -302, -475, -218, -1233)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="ShipStructLeft" type="CollisionPolygon2D" parent="."]
+position = Vector2(-11, 17)
+polygon = PackedVector2Array(-598, 187, -783, 241, -803, 1104, -617, 1182, -427, 1125, -396, 1024, -204, 1349, 8, 1311, -355, 1096)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="ShipStructRight" type="CollisionPolygon2D" parent="."]
+position = Vector2(22, 16)
+rotation = 3.14159
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(-598, 187, -783, 241, -803, 1104, -617, 1182, -427, 1125, -396, 1024, -212.997, 1344, 9.00332, 1310, -355, 1096)
+
+[node name="StaticWalls" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticWalls"]
 position = Vector2(342, -185)
 polygon = PackedVector2Array(-185, 430, 175, 430, 175, 465, 20, 465, 20, 1275, -150, 1275, -150, 1430, -185, 1430, -185, 1229, -25, 1229, -25, 610, -185, 610)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2.75, 654)
-shape = SubResource("RectangleShape2D_ato8j")
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticWalls"]
 position = Vector2(-334, -185)
 rotation = -3.14159
 scale = Vector2(1, -1)
 polygon = PackedVector2Array(-185, 430, 175, 430, 175, 465, 20, 465, 20, 1275, -150, 1275, -150, 1430, -185, 1430, -185, 1229, -25, 1229, -25, 610, -185, 610)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticWalls"]
+position = Vector2(2.75, 654)
+shape = SubResource("RectangleShape2D_ato8j")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticWalls"]
 position = Vector2(5, 0)
 polygon = PackedVector2Array(-181, -1223, 200, -1225, 190, -567, 328, -397, 358, -98, 516, -94, 520, -55, 319, -57, 315, -380, 156, -379, 157, -1181, -151, -1183, -150, -381, -311, -381, -311, -56, -511, -53, -513, -95, -358, -94, -329, -389, -192, -529)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-11, 17)
-polygon = PackedVector2Array(-598, 187, -783, 241, -803, 1104, -617, 1182, -427, 1125, -396, 1024, -310, 1212, -182, 1341, -355, 1096)
-
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
-position = Vector2(22, 16)
-rotation = 3.14159
-scale = Vector2(1, -1)
-polygon = PackedVector2Array(-598, 187, -783, 241, -803, 1104, -617, 1182, -427, 1125, -396, 1024, -310, 1212, -182, 1341, -355, 1096)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
-position = Vector2(-11, 17)
-polygon = PackedVector2Array(-107, -1403, 133, -1404, 250, -1241, 326, -521, 523, -147, 577, -117, 515, -117, 353, -429, 303, -520, 219, -1250, -179, -1260, -278, -482, -480, -122, -546, -120, -494, -135, -302, -475, -218, -1233)
+[node name="Player" parent="." instance=ExtResource("2_tut7r")]

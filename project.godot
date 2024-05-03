@@ -22,7 +22,7 @@ Space_Ship="*res://Space_Ship/Space_Ship.gd"
 [display]
 
 window/size/viewport_width=900
-window/size/viewport_height=900
+window/size/viewport_height=500
 
 [input]
 
@@ -33,4 +33,4 @@ up={
 
 [rendering]
 
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"

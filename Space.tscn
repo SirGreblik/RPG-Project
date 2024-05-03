@@ -1,10 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://r5r1ygghduwu"]
+[gd_scene load_steps=3 format=3 uid="uid://r5r1ygghduwu"]
 
-[ext_resource type="PackedScene" uid="uid://fe3s4akv4bh6" path="res://Space_Ship/Space_Ship.tscn" id="1_20uqd"]
+[ext_resource type="PackedScene" uid="uid://fe3s4akv4bh6" path="res://Space_Ship/Space_Ship.tscn" id="2_3x3p0"]
+[ext_resource type="PackedScene" uid="uid://bdhq3x8kp4v13" path="res://Map_objects/AsteroidTest.tscn" id="2_k6mpl"]
 
 [node name="Space" type="Node2D"]
 
-[node name="Space_Ship" parent="." instance=ExtResource("1_20uqd")]
+[node name="Panel4" type="Panel" parent="."]
+offset_left = -2972.0
+offset_top = -1473.0
+offset_right = 3430.0
+offset_bottom = 1335.0
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = -376.0
@@ -23,3 +28,17 @@ offset_left = 252.0
 offset_top = 143.0
 offset_right = 292.0
 offset_bottom = 183.0
+
+[node name="AsteroidTest1" parent="." instance=ExtResource("2_k6mpl")]
+position = Vector2(4, -2992)
+
+[node name="Space_Ship" parent="." instance=ExtResource("2_3x3p0")]
+
+[node name="AsteroidTest" parent="." instance=ExtResource("2_k6mpl")]
+position = Vector2(-1041, 1727)
+
+[node name="AsteroidTest2" parent="." instance=ExtResource("2_k6mpl")]
+position = Vector2(140, 2006)
+
+[node name="AsteroidTest3" parent="." instance=ExtResource("2_k6mpl")]
+position = Vector2(1219, 1803)
