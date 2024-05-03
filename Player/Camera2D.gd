@@ -5,7 +5,6 @@ var z_min =3
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_ignore_rotation(false)
-	set_limit(1000,1000)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta):

@@ -8,6 +8,7 @@
 size = Vector2(345.5, 180)
 
 [node name="SpaceShip" type="CharacterBody2D"]
+position = Vector2(0, -942)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_xirev")
